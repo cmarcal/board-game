@@ -1,12 +1,12 @@
 "use strict";
-var mongoose = require("mongoose");
-var Schema = mongoose.Schema;
-var uuid = require("uuid");
+import mongoose from "mongoose";
+import { v4 as uuidv4 } from "uuid";
+const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
   userId: {
     type: String,
-    default: uuid.v4(),
+    default: uuidv4(),
   },
   firstName: {
     type: String,
@@ -26,4 +26,6 @@ const UserSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model("User", UserSchema);
+export default function initUserSchema(): void {
+  mongoose.model("User", UserSchema);
+}

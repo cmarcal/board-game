@@ -36,7 +36,7 @@ export const deleteProfile = (
     json: (arg0: { message: string }) => void;
   }
 ) => {
-  User.remove({ _id: req.params.userId }, (err) => {
+  User.findOneAndDelete({ userId: req.params.userId }, {}, (err) => {
     err && res.send(err);
     res.json({ message: "User successfully deleted" });
   });
