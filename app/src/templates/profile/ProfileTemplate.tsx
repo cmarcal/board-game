@@ -1,5 +1,8 @@
 import React from 'react';
-
+import { Container } from './styles';
+import { useDataProfile } from '../../hooks/profile/';
 export function ProfileTemplate() {
-	return <div></div>;
+	useDataProfile();
+
+	return <Container>Bem vindo ao seu Perfil</Container>;
 }

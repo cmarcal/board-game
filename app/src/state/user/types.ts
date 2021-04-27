@@ -4,7 +4,7 @@ export interface User {
 	lastName: string;
 	id: string;
 	email: string;
-	createdAt: string;
+	createdAt?: string;
 }
 
 export const createUser = (payload: UserDTO): User => {

@@ -1,0 +1,45 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:react/recommended", // Uses the recommended rules from @eslint-plugin-react
+		"plugin:@typescript-eslint/recommended", // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+		"plugin:@typescript-eslint/eslint-recommended",
+		"prettier/@typescript-eslint", // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
+		"eslint-config-prettier"
+	],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "extends": "./tsconfig.json"
+  },
+  "rules": {
+    "no-console": "off",
+		"no-unused-vars": "warn",
+		"quotes": ["error", "single"],
+		"prettier/prettier": "off",
+		"no-mixed-requires": "off",
+		"no-use-before-define": "off",
+		"react/display-name": ["off", { "ignoreTranspilerName": true }],
+		"@typescript-eslint/triple-slash-reference": "off",
+		"@typescript-eslint/no-use-before-define": "off",
+		"@typescript-eslint/class-name-casing": "off",
+		"@typescript-eslint/camelcase": "off",
+		"@typescript-eslint/no-var-requires": "off",
+		"@typescript-eslint/no-empty-interface": "off",
+		"@typescript-eslint/explicit-function-return-type": "off", 
+  },
+  "plugins": ["prettier", "eslint-plugin-import-helpers", "react-hooks"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
+
