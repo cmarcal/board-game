@@ -5,10 +5,11 @@ const UserSchema = mongoose.model(
   'User',
   new mongoose.Schema(
     {
-      _id: { type: String, default: uuid.v4 },
+      externalId: { type: String, default: uuid.v4 },
       firstName: String,
       lastName: String,
       email: String,
+      password: String,
       createdAt: {
         type: Date,
         default: Date.now,
